@@ -1,6 +1,6 @@
 This repo is to help me - and anyone else who may derive value from it - better understand GraphQL and Apollo.
 
-### GraphQL
+# GraphQL
 
 GraphQL allows users to fullfill queries of *existing* data.
 
@@ -21,67 +21,67 @@ Building blocks of GraphQL:
   * queries
   * resolvers
 
-**Queries**
+## **Queries**
   * The request you make to GraphQL is a query.
-  ```js
-    // overview of query syntax
-    operation_type operation_name (variable_definitions) { 
-      selection_sets 
-    }
-
-    // basic example
-    // declare a new query with the `query` keyword
-    // look for the field name `stuff`
-    query {
-      stuff
-    }
-
-    // we can also look for nested fields
-    query {
-      stuff {
-        name
-        age
-        height
+    ```js
+      // overview of query syntax
+      operation_type operation_name (variable_definitions) { 
+        selection_sets 
       }
-    }
 
-    // query fields can also point to arrays
-    query {
-      posts { // this is an array of posts
-        title
-        content
-        author {
+      // basic example
+      // declare a new query with the `query` keyword
+      // look for the field name `stuff`
+      query {
+        stuff
+      }
+
+      // we can also look for nested fields
+      query {
+        stuff {
           name
-          profileURL
+          age
+          height
         }
       }
-    }
 
-    // query fields also support arguments 
-    // if we want to retrieve a specific post...
-    query {
-      post (id: "abc123") {
-        title
-        content
-        author {
-          name
-          profileURL
+      // query fields can also point to arrays
+      query {
+        posts { // this is an array of posts
+          title
+          content
+          author {
+            name
+            profileURL
+          }
         }
       }
-    }
 
-    // we can also make the arguments dynamic
-    query getMyPost($id: String) {
-      post (id: $id) {
-        title
-        content
-        author {
-          name
-          profileURL
+      // query fields also support arguments 
+      // if we want to retrieve a specific post...
+      query {
+        post (id: "abc123") {
+          title
+          content
+          author {
+            name
+            profileURL
+          }
         }
       }
-    }
-  ```
+
+      // we can also make the arguments dynamic
+      query getMyPost($id: String) {
+        post (id: $id) {
+          title
+          content
+          author {
+            name
+            profileURL
+          }
+        }
+      }
+    ```
 
 
 
