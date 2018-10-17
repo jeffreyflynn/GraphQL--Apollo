@@ -24,7 +24,12 @@ Building blocks of GraphQL:
 **Queries**
   * The request you make to GraphQL is a query.
   ```js
-    // basic query syntax
+    // overview of query syntax
+    operation_type operation_name (variable_definitions) { 
+      selection_sets 
+    }
+
+    // basic example
     // declare a new query with the `query` keyword
     // look for the field name `stuff`
     query {
@@ -77,10 +82,6 @@ Building blocks of GraphQL:
       }
     }
   ```
-
-**Overview of Queries**
-
-  * 
 
 
 
