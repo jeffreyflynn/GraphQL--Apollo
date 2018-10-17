@@ -1,1 +1,1 @@
-# GraphQL--Apollo
+This repo is to help me - and anyone else who may derive value from it - better understand GraphQL and Apollo.
